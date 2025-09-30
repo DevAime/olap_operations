@@ -6,11 +6,29 @@ Aime Muganga-232
 
 This notebook demonstrates basic OLAP (Online Analytical Processing) operations using Python with pandas, SQLite, and seaborn for visualization.
 
-* **ROLAP** (Relational OLAP) → SQL-based aggregations
-* **MOLAP** (Multidimensional OLAP) → In-memory pivot tables
-* **HOLAP** (Hybrid OLAP) → Combination of ROLAP and MOLAP
 
-The script also demonstrates common OLAP operations like **slice, dice, drill-down, and roll-up**.
+## What is OLAP?
+
+**OLAP (Online Analytical Processing)** is a category of tools and techniques that allows users to analyze large volumes of data quickly and interactively. Unlike traditional databases that focus on day-to-day transactions (**OLTP – Online Transaction Processing**), OLAP is optimized for answering analytical queries such as:
+
+* What is the average salary by department?
+* How does salary vary across different age groups?
+* Can we compare totals across multiple dimensions?
+
+OLAP works with **multidimensional data (cubes)**, enabling operations such as:
+
+* **Roll-up** → Summarizing data at a higher level (e.g., total salary by department).
+* **Drill-down** → Looking at more detailed levels (e.g., salary by individual employees).
+* **Slice** → Filtering data on a single dimension (e.g., only HR department).
+* **Dice** → Filtering on multiple conditions (e.g., HR employees with salary > 60,000).
+
+There are three main OLAP models:
+
+* **ROLAP (Relational OLAP):** Uses relational databases (SQL queries).
+* **MOLAP (Multidimensional OLAP):** Uses in-memory cubes and pivot tables.
+* **HOLAP (Hybrid OLAP):** Combines ROLAP + MOLAP for flexibility.
+
+This notebook demonstrates all three approaches with visual examples.
 
 ---
 
@@ -65,7 +83,7 @@ Run all cells to:
 ## Example Outputs
 
 ROLAP: Average Salary by Department
-<img width="50px" alt="image" src="https://github.com/user-attachments/assets/cb7e0286-b173-474a-b252-4cbb41b45f52" />
+<img width="500px" alt="image" src="https://github.com/user-attachments/assets/cb7e0286-b173-474a-b252-4cbb41b45f52" />
 
 
 MOLAP: Average Salary Cube (Department vs Age)
